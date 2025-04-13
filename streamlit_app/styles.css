@@ -1,0 +1,308 @@
+/* Yellow theme colors */
+:root {
+    --primary: #F5A623;
+    --primary-light: #FFD180;
+    --primary-dark: #E69516;
+    --accent: #1E3A8A;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --background: #FFFFFF;
+    --background-secondary: #F8F9FA;
+    --border: #E0E0E0;
+}
+
+/* Main typography */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-primary);
+}
+
+h1, h2, h3 {
+    color: var(--text-primary);
+    margin-bottom: 0.8rem;
+}
+
+h1 {font-size: 2.2rem;}
+h2 {font-size: 1.8rem;}
+h3 {font-size: 1.4rem;}
+
+/* Card styling */
+.card, [data-testid="stContainer"] {
+    background-color: var(--background);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--primary);
+}
+
+/* Metric displays */
+.metric-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 0.3rem;
+}
+
+.metric-label {
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+}
+
+/* Table styling */
+.dataframe {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.dataframe th {
+    background-color: var(--background-secondary);
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+.dataframe td {
+    padding: 0.75rem 1rem;
+    border-top: 1px solid var(--border);
+}
+
+.dataframe tr:hover {
+    background-color: #FFF8E1;
+}
+
+/* Button styling */
+.stButton button {
+    background-color: var(--primary) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 4px !important;
+    font-weight: 500 !important;
+    transition: all 0.2s !important;
+}
+
+.stButton button:hover {
+    background-color: var(--primary-dark) !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;
+}
+
+/* Sidebar styling */
+[data-testid="stSidebar"] {
+    background-color: var(--background-secondary);
+    border-right: 1px solid var(--border);
+}
+
+[data-testid="stSidebar"] [data-testid="stVerticalBlock"] {
+    padding-top: 1rem;
+}
+
+[data-testid="stSidebar"] .stButton button {
+    background-color: var(--primary) !important;
+    color: white !important;
+}
+
+/* Alert box styling */
+[data-testid="stAlert"] {
+    background-color: #FFF8E1;
+    border-left-color: var(--primary);
+}
+
+/* Tabs styling */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 2px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    height: 50px;
+    white-space: pre-wrap;
+    background-color: var(--background-secondary);
+    border-radius: 4px 4px 0 0;
+    gap: 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: white;
+    color: var(--primary) !important;
+    border-bottom: 2px solid var(--primary);
+    font-weight: bold;
+}
+
+/* Form input styling */
+[data-testid="stTextInput"] input, 
+[data-testid="stNumberInput"] input, 
+[data-testid="stTextArea"] textarea {
+    background-color: var(--background-secondary);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+}
+
+/* Select box styling */
+[data-testid="stSelectbox"] {
+    background-color: var(--background-secondary);
+    border-radius: 4px;
+}
+
+/* Highlight color for multiselect */
+[data-baseweb="tag"] {
+    background-color: var(--primary-light) !important;
+}
+
+/* Toggle switch - active color */
+[data-testid="stCheckbox"] [data-baseweb="checkbox"] div[data-checked="true"],
+[data-testid="stToggle"] [role="switch"][aria-checked="true"] {
+    background-color: var(--primary) !important;
+}
+
+/* Better card styling */
+[data-testid="stVerticalBlock"] div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"] div[style*="flex: 1 1 33"] > div[data-testid="stVerticalBlock"] {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.1);
+    height: 100%;
+    transition: transform 0.2s;
+}
+
+[data-testid="stVerticalBlock"] div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"] div[style*="flex: 1 1 33"] > div[data-testid="stVerticalBlock"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.1);
+}
+
+/* Links styling */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Button styling */
+.stButton > button {
+    background-color: #f8f9fa;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    color: #3c4043;
+    font-size: 14px;
+    height: 36px;
+    padding: 0 16px;
+    transition: background-color 0.2s;
+}
+
+.stButton > button:hover {
+    background-color: #f1f3f4;
+    border-color: #d2d6dc;
+}
+
+/* Header styling */
+h2 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+/* Add these styles to fix table spacing */
+[data-testid="stDataFrame"] {
+    width: 100%;
+}
+
+/* Fix spacing in tables */
+.stDataFrame table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.stDataFrame thead tr th {
+    padding: 8px 12px !important;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    font-weight: 600;
+}
+
+.stDataFrame tbody tr td {
+    padding: 8px 12px !important;
+    border-bottom: 1px solid #e9ecef;
+    vertical-align: middle;
+}
+
+/* Reduce the spacing between header and content */
+.stDataFrame thead tr {
+    line-height: 1.2 !important;
+}
+
+.stDataFrame tbody tr {
+    line-height: 1.2 !important;
+}
+
+/* Make the table more compact */
+.stDataFrame tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Apply styling to regular st.table and st.dataframe */
+[data-testid="stTable"] table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+[data-testid="stTable"] thead tr th {
+    padding: 8px 12px !important;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    font-weight: 600;
+    line-height: 1.2 !important;
+}
+
+[data-testid="stTable"] tbody tr td {
+    padding: 8px 12px !important;
+    border-bottom: 1px solid #e9ecef;
+    line-height: 1.2 !important;
+}
+
+/* Improved table spacing */
+[data-testid="stVerticalBlock"] table {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Clean up header spacing */
+h1 + h2, h2 + h3 {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Improve row spacing in our manually created tables */
+[data-testid="stHorizontalBlock"] {
+    gap: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+/* Make sure separator lines are compact */
+hr, [data-testid="stHorizontalBlock"] + hr {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+    padding: 0 !important;
+}
+
+/* Fix spacing between header and content */
+.block-container {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+/* Make table content more compact */
+[data-testid="column"] > div > p {
+    margin-bottom: 0 !important;
+    line-height: 1.2 !important;
+    padding: 0 !important;
+} 
